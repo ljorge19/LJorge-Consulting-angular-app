@@ -22,6 +22,7 @@
       <tr>
         <th></th>
         <th></th>
+        <th></th>
         <th>CPF</th>
         <th>Nome</th>
         <th>Telefone</th>
@@ -30,7 +31,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let pessoa of pessoas | filterPessoaNome:busca.value">
-        <th scope="row">
+        <th scope="row"> 
           <a [routerLink]="['/pessoa/persist/', pessoa.id]" class="btn btn-default btn-sm">
               <span class="glyphicon glyphicon-pencil"></span>
           </a>
@@ -40,6 +41,11 @@
               <span class="glyphicon glyphicon-trash"></span>
           </a>
         </th>
+        <th>
+            <a [routerLink]="['/pessoa/detalhe/', pessoa.id]" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-info-sign"></span>
+          </a>
+          </th>
         <td>{{pessoa.cpf}}</td>
         <td>{{pessoa.nome}}</td>
         <td>{{pessoa.telefone}}</td>

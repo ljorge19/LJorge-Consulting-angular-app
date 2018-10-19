@@ -18,6 +18,7 @@ import { PessoaService }  from './services/pessoa.service';
 import { NotFoundComponent } from './errors/notfound.component';
 
 import { FilterPessoaNome } from './filters/pessoa/nome.filter';
+import { PessoaDetalheComponent } from './pessoa/detalhe/pessoa.detalhe.component';
 
 @NgModule({
   imports:      [ BrowserModule, RouterModule.forRoot(ROUTES), FormsModule, HttpModule ],
@@ -28,6 +29,7 @@ import { FilterPessoaNome } from './filters/pessoa/nome.filter';
     PessoaComponent,
     PessoaPersistComponent,
     PessoaListComponent,
+    PessoaDetalheComponent,
     NotFoundComponent,
 
     FilterPessoaNome
