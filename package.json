@@ -48,7 +48,7 @@
     "node": "8.11.3",
     "npm": "5.6.0",
     "path": "^0.12.7",
-    "postinstall": "ng build --prod",
+    "postinstall": "ng build --aot --target=production",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
     "typescript": "~2.1.6",
