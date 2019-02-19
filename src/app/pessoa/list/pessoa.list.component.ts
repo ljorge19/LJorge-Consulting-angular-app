@@ -15,14 +15,26 @@ export class PessoaListComponent implements OnInit {
   constructor(private pessoaService: PessoaService) { }
 
   ngOnInit() {
-    this.list()
+    this.list();
+    
+    setTimeout(function(){
+      console.log('resultadosss : ',JSON.stringify(this.pessoas));
+    },70000);
   }
 
   public list(): void {
     this.pessoaService.listar().subscribe(
-      res => this.pessoas = res,
-      error => alert("Falha ao carregar pessoas")
+      (response) => {
+        this.pessoas = response;
+        console.log('teste 1: ', (response));
+        console.log('teste 2: ', (this.pessoas));
+      },  
+      error => {
+        return alert("Falha ao carregar pessoas");
+      }
+
     );
+    console.log(this.pessoas)
   }
 
   public delete(id: number) {

@@ -37,9 +37,8 @@
   <div class="form-group">
     <label for="exampleInputDescricao">Descrição</label>
    <!--  <input  width="390" border="9" align="center" type="text" [(ngModel)]="pessoa.descricao" name="descricao" class="form-control" placeholder="Descrição"> -->
-
-    <textarea name="descricao" [(ngModel)]="pessoa.descricao"  class="form-control" placeholder="Descrição"></textarea>
+    <textarea type="text" name="descricao" [(ngModel)]="pessoa.descricao"  class="form-control" placeholder="Descrição" required></textarea>
   </div>
 
-  <button *ngIf="!contatoForm.invalid" type="button" (click)="persist()" class="btn btn-default">{{pessoa.id ? 'Alterar' : 'Adicionar'}}</button>
+  <button [disabled]="contatoForm.invalid" type="button" (click)="persist()" class="btn btn-default">{{pessoa.id ? 'Alterar' : 'Adicionar'}}</button>
 </form>

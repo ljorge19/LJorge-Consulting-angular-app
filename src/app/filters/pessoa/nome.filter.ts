@@ -12,5 +12,4 @@ export class FilterPessoaNome implements PipeTransform {
         pessoa => pessoa.nome.toLowerCase().includes(input.toLowerCase())
       );
     }
-
 }
